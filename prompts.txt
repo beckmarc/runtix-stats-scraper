@@ -1,0 +1,10 @@
+I want to create a database of running times of individual runners scraped from a site called runtix across different events. how would you 
+approach something like this. the site is php so there are no backend endpoints but the content needs to be extracted from the site itself. If I have
+ a consistent database of running times from different events for each runner I want to perform some analysis based on this data.
+
+Yes lets go for python and start with the extraction. The main pattern for scraping will look like the following: 
+https://runtix.com/sts/10020/2024/0 shows all events including the links to the individual events for the year 2024. if you change the year it will 
+obvisouly show all events for other years. Make this a parameter so I can specify which years events to scrape. then look use the following css 
+selector to get the <a> element containing the link to an event: .row.competition .two.columns.omega > a
+lets first start with this and see if we can fetch all the event links
+

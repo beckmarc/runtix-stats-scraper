@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python test_participant_scrape.py:*)",
+      "Bash(.venv/bin/python:*)",
+      "Bash(mcp list:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
